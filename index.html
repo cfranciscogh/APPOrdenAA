@@ -1,44 +1,75 @@
 <!DOCTYPE html> 
 <html>
 <head>
-	<title>SODIMAC - Pedidos</title>
+	<title>OnTrack Meridian</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/themes/default/jquery.mobile-1.4.5.min.css">
+    <link rel="stylesheet" type="text/css" href="css/themes/default/jquery.mobile.theme-1.4.5.min.css">
+    <link rel="stylesheet" type="text/css" href="css/login.css">
     <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery.mobile-1.4.5.min.js"></script>
+    <script src="js/funciones.js"></script>
+    <script src="js/login.js"></script>
+    <script type="text/javascript" charset="utf-8">
 
+    // Wait for device API libraries to load
+    //
+    document.addEventListener("deviceready", onDeviceReady, false);
 
+    // device APIs are available
+    //
+    function onDeviceReady() {
+        navigator.splashscreen.hide();
+		
+    }
 
-<style type="text/css">
-.texto {
-	font-family: "Arial", sans-serif;
-	font-size: 18px;
-	color: #FFF;
-	text-transform:uppercase;
-}
-</style>
+    </script>
 </head>
 
 <body >
 
-<div style="width:100%;background:#000; text-align:center; position:absolute; left:0px; top:0px; right:0px; bottom:0px;">
 
-<table border="0" width="100%" height="100%">
-<tr>
-	<td valign="middle" align="center">
-    
-    
-    <img src="img/logo.png" width="200" height="78"><br><br>
-<span class="texto">Pronto <br>
-una <strong>nueva <br>
-forma de <br>
-transportARte</strong><br>
-en tu ciudad</span>
-    
-    
-    </td>
-</tr>
-</table>
- </div>
+<div data-role="page" class="fondo">
+
+	<div data-role="header" data-position="fixed" data-theme="a">
+		<h1>APP V 1.0</h1>
+	</div><!-- /header -->
+
+	<div role="main" class="ui-content">
+        
+        
+        <div class="ui-body ui-body-a ui-corner-all">
  
- 
- </body>
+            <p style="text-align:center;">
+            <img src="img/transporte_meridian.png" />
+            </p>
+            
+            <form>
+            
+            <label for="usuario">Usuario:</label>
+    		<input type="text" name="usuario" id="usuario" value=""  />
+            
+            <label for="clave">Contrase&ntilde;a:</label>
+    		<input type="password" name="clave" id="clave" value=""  />
+    
+            </form>
+		</div>
+        
+        
+	</div><!-- /content -->
+
+	<div data-role="footer" data-position="fixed">
+		<div data-role="navbar" data-iconpos="top">
+		<ul>
+			<li><a id="ingresar"  data-icon="arrow-r">Ingresar</a></li>
+			<li><a onClick="exitFromApp();" data-icon="back">Cerrar</a></li>
+			 
+		</ul>
+	</div><!-- /navbar -->
+	</div><!-- /footer -->
+</div><!-- /page -->
+
+
+</body>
 </html>

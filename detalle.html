@@ -1,0 +1,56 @@
+<!DOCTYPE html> 
+<html>
+<head>
+	<title>OnTrack Meridian</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/themes/default/jquery.mobile-1.4.5.min.css">
+    <link rel="stylesheet" type="text/css" href="css/themes/default/jquery.mobile.theme-1.4.5.min.css">
+     <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery.mobile-1.4.5.min.js"></script>
+    <script src="js/funciones.js"></script>
+    <script src="js/detalle.js"></script>      
+</head>
+
+<body >
+
+
+<div data-role="page" class="fondo">
+
+	<div data-role="header" data-position="fixed" data-theme="a">
+		<h1 id="tituloEmpresa">Antares Adaunas</h1>
+	</div><!-- /header -->
+
+	<div role="main" id="contentProgramaciones" class="ui-content">
+    
+    <div id="one" class="ui-content ui-body ui-body-a">
+            	<h3 class="titulo oc" style="text-align:center;">Detalle de incidencias</h3>
+                 <p>
+                <b>Nro Orden:</b> <span class="orden">-</span><br>
+                <b>Referencia:</b> <span class="referencia">-</span><br>
+               
+                </p>
+                 
+                <form class="ui-filterable"><input id="rich-autocomplete-input" data-type="search" placeholder="Buscar..."></form>   	 
+        <ul id="listProgramacion" data-role="listview" data-filter="true" data-inset="true" data-input="#rich-autocomplete-input">
+        </ul>
+     
+                
+            </div>
+         
+                
+	</div><!-- /content -->
+
+	<div data-role="footer" data-position="fixed">
+		<div data-role="navbar" data-iconpos="top">
+		<ul>
+		 
+			<li><a id="regresarPanel" data-ajax="false" href="consulta.html?ruc=" data-icon="back">Regresar</a></li>			 
+		</ul>
+	</div><!-- /navbar -->
+	</div><!-- /footer -->
+</div><!-- /page -->
+
+
+</body>
+</html>
