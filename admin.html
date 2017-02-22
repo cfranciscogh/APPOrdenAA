@@ -9,7 +9,7 @@
 	<script src="js/jquery.min.js"></script>
 	<script src="js/jquery.mobile-1.4.5.min.js"></script>
     <script src="js/funciones.js"></script>
-    <script src="js/consulta.js"></script>
+    <script src="js/admin.js"></script>
     
     <style type="text/css">
 	#myPopup {
@@ -29,10 +29,15 @@
 
 	<div id="contentProgramaciones" role="main" class="ui-content">
     
-    <form class="ui-filterable"><input id="rich-autocomplete-input" data-type="search" placeholder="Buscar..."></form>   	 
+    <input placeholder="Ingresar ruc" type="number" name="ruc" id="ruc" maxlength="11" size="11" value="" pattern="[0-9]*"/>
+   <div class="panelMensaje" style="display:none;">  
+   <h3>No se encontro información</h3>
+   </div>
+   <div class="panelOrden" style="display:none;"> 
+    <form class="ui-filterable"><input id="rich-autocomplete-input" data-type="search" placeholder="Buscar orden..."></form>   	 
         <ul id="listProgramacion" data-role="listview" data-filter="true" data-inset="true" data-input="#rich-autocomplete-input">
         </ul>
-     
+     </div>
      
      
       
@@ -47,7 +52,7 @@
 	<div data-role="footer" data-position="fixed">
 		<div data-role="navbar" data-iconpos="top">
 		<ul>
-			<li><a id="actualizar" data-icon="refresh">Actualizar</a></li>
+			<li><a id="actualizar" data-icon="refresh">Buscar</a></li>
             
             <!--<li><a id="liberar" data-icon="delete">Liberar</a></li>-->
             
