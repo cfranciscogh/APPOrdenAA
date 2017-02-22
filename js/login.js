@@ -37,7 +37,11 @@ var loginValidar = function(){
           resultado = $.parseJSON(data.d);
 		  //console.log(resultado);
 		  if ( resultado.code == 1){
-			  location.href = "consulta.html?ruc=" + resultado.datos[0].codigo;
+			  
+			  if ( resultado.datos[0].tipo_acceso == 2 || resultado.datos[0].empresa == "ADUANA")
+			  	location.href = "admin.html";
+			  else
+			  	location.href = "consulta.html?ruc=" + resultado.datos[0].ruc;
 		  }
 		  else{
 			   $.mobile.loading('hide');
