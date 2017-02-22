@@ -4,8 +4,11 @@ $(document).ready(function(e) {
 	$(".referencia").html($.QueryString["cliente"]);
 	 
  	//setPedido($.QueryString["orden"]); id="regresarPanel" data-ajax="false" href="consulta.html?ruc="
-	 
-	 $("#regresarPanel").attr("href","consulta.html?ruc=" + $.QueryString["ruc"]);
+	 if ( $.QueryString["admin"] == 1 )
+	 	$("#regresarPanel").attr("href","admin.html?ruc=" + $.QueryString["ruc"]);
+	 else
+	 	$("#regresarPanel").attr("href","consulta.html?ruc=" + $.QueryString["ruc"]);
+		
 	setIncidencia(decodeURIComponent($.QueryString["orden"]));
 	 
 
@@ -28,7 +31,7 @@ function setIncidencia(orden){
 		contentType: "application/json; charset=utf-8",
         success : function(data, textStatus, jqXHR) {
 		resultado = $.parseJSON(data.d);
-		console.log(resultado);
+		//console.log(resultado);
 			$.mobile.loading('hide');
 			if ( resultado.length > 0 ){
 				
