@@ -36,7 +36,7 @@ function setIncidencia(orden){
 			if ( resultado.length > 0 ){
 				
 				for (var i = 0; i<resultado.length;i++){
-					$("#listProgramacion").append('<li><a data-ajax="false">'+ resultado[i].incidenci + '<br><span style=" font-weight:normal;">Fecha: ' + resultado[i].fch_incid +' Hora: ' + resultado[i].hra_incid +'</span>	</a></li> ');		
+					$("#listProgramacion").append('<li><a data-ajax="false">'+ resultado[i].incidenci + '<br><span style=" font-weight:normal;">Fecha: ' + resultado[i].fch_incid +' - Hora: ' + resultado[i].hra_incid +'</span>	</a></li> ');		
 					 
 				}
 				
