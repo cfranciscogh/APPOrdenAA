@@ -23,11 +23,13 @@
         //navigator.splashscreen.hide();
 		var flag = window.localStorage.getItem("recordar");
 		 if (flag!=null){
-			 page = window.localStorage.getItem("page");
-			 if (  page == "consulta.html" )
-			 	page = page + "?ruc=" + window.localStorage.getItem("ruc");
+			 if ( flag == 1 ){
+			 	page = window.localStorage.getItem("page");
+			 	if (  page == "consulta.html" )
+			 		page = page + "?ruc=" + window.localStorage.getItem("ruc");
 				
-			location.href = page;	
+				location.href = page;	
+			 }
 		 }
     }
 
