@@ -1,10 +1,13 @@
 // JavaScript Document
 // JavaScript Document
 $(document).ready(function(e) {
+	
+		 
+	
     	$("#ingresar").click(function(e) {
             e.preventDefault();
 			$.mobile.loading('show');
-			setTimeout(loginValidar, 500);
+			setTimeout(loginValidar, 100);
         });
 });
 
@@ -38,10 +41,20 @@ var loginValidar = function(){
 		  //console.log(resultado);
 		  if ( resultado.code == 1){
 			  
-			  if ( resultado.datos[0].tipo_acceso == 2 || resultado.datos[0].empresa == "ADUANA")
+			  var recordar = ( $('input#recordar').is(':checked') ? 1 : 0);
+			    window.localStorage.setItem("user", $("#usuario").val());
+				window.localStorage.setItem("pass",$("#clave").val());
+				window.localStorage.setItem("recordar", recordar);
+				window.localStorage.setItem("ruc", resultado.datos[0].ruc);
+			  
+			  if ( resultado.datos[0].tipo_acceso == 2 || resultado.datos[0].empresa == "ADUANA"){
+				window.localStorage.setItem("page","admin.html");
 			  	location.href = "admin.html";
-			  else
+			  }
+			  else {
+				window.localStorage.setItem("page","consulta.html");
 			  	location.href = "consulta.html?ruc=" + resultado.datos[0].ruc;
+			  }
 		  }
 		  else{
 			   $.mobile.loading('hide');

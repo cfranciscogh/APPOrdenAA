@@ -14,10 +14,8 @@ $(document).ready(function(e) {
 	
  	getProgramaciones();
 	
- 
 	
-	 	$("#irTracking").attr("href","index.html");
-	
+	//$("#irTracking").attr("href","index.html");
 	 
 	
 });

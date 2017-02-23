@@ -19,3 +19,10 @@
         {
             navigator.app.exitApp();
         }
+		
+
+ function sesionFromApp()
+        {
+			window.localStorage.clear();
+            location.href = "index.html";
+        }
