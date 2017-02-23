@@ -4,10 +4,10 @@
         id        = "com.antaresaduanas.ordensintad"
         version   = "1.0.0">
 
-    <name>Track AA</name>
+    <name>Antares Aduanar</name>
 
     <description>
-      Consulta de incidencias
+      Tracking de Ordenes
     </description>
 
     <author href="http://grupotransmeridian.com.pe" email="fcamacho@meridian.com.pe">
