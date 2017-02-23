@@ -20,8 +20,15 @@
     // device APIs are available
     //
     function onDeviceReady() {
-        navigator.splashscreen.hide();
-		
+        //navigator.splashscreen.hide();
+		var flag = window.localStorage.getItem("recordar");
+		 if (flag!=null){
+			 page = window.localStorage.getItem("page");
+			 if (  page == "consulta.html" )
+			 	page = page + "?ruc=" + window.localStorage.getItem("ruc");
+				
+			location.href = page;	
+		 }
     }
 
     </script>
@@ -42,7 +49,7 @@
         <div class="ui-body ui-body-a ui-corner-all">
  
             <p style="text-align:center;">
-            <img src="img/transporte_meridian.png" style="max-width:100%;" />
+            <img src="img/transporte_meridian.png" />
             </p>
             
             <form>
@@ -53,6 +60,9 @@
             <label for="clave">Contrase&ntilde;a:</label>
     		<input type="password" name="clave" id="clave" value=""  />
     
+    
+    		 <label for="recordar">Recordar</label>
+    		<input type="checkbox" name="recordar" id="recordar"   />
             </form>
 		</div>
         
