@@ -24,12 +24,18 @@
 <div data-role="page" class="fondo">
 
 	<div data-role="header" data-position="fixed" data-theme="a">
-		<h1 id="tituloEmpresa">Antares Adaunas</h1>
+		<h1 id="tituloEmpresa">Antares Aduanas</h1>
 	</div><!-- /header -->
 
 	<div id="contentProgramaciones" role="main" class="ui-content">
+    <div style="display:none;">
+    <input placeholder="Ingresar ruc" type="number" name="ruc" id="ruc" maxlength="11" size="11" pattern="[0-9]*"/>
+   </div> 
+   <div class="autocompletePanel">
+       <ul class="autocomplete"  data-role="listview" data-inset="true" data-filter="true" 
+		  data-filter-placeholder="Ingresar Ruc/Razon Social"></ul>
+    </div>
     
-    <input placeholder="Ingresar ruc" type="number" name="ruc" id="ruc" maxlength="11" size="11" value="" pattern="[0-9]*"/>
    <div class="panelMensaje" style="display:none;">  
    <h3>No se encontro información</h3>
    </div>

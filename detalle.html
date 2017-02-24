@@ -15,7 +15,7 @@
 <body >
 
 
-<div data-role="page" class="fondo">
+<div data-role="page" class="fondo" style=" background-color:#FFF;">
 
 	<div data-role="header" data-position="fixed" data-theme="a">
 		<h1 id="tituloEmpresa">Antares Aduanas</h1>
@@ -23,20 +23,21 @@
 
 	<div role="main" id="contentProgramaciones" class="ui-content" style="padding:0px;">
     
-    <div id="one" class="ui-content ui-body ui-body-a">
+    <div id="one" class="ui-content ui-body ui-body-a" style="background-color: #38c;color: white;text-shadow: 0 0 0;">
             	<h3 class="titulo oc" style="text-align:center;">Detalle de incidencias</h3>
                  <p>
                 <b>Nro Orden:</b> <span class="orden">-</span><br>
                 <b>Referencia:</b> <span class="referencia">-</span><br>
                
                 </p>
-                 
+               </div>  
+               <div id="one1" class="ui-content ui-body ui-body-a" style="border:none;"> 
                 <form class="ui-filterable"><input id="rich-autocomplete-input" data-type="search" placeholder="Buscar..."></form>   	 
         <ul id="listProgramacion" data-role="listview" data-filter="true" data-icon="false" data-inset="true" data-input="#rich-autocomplete-input">
         </ul>
-     
+     </div>
                 
-            </div>
+           
          
                 
 	</div><!-- /content -->
